@@ -1,0 +1,48 @@
+/* Global Theme Overrides based on DESIGN.md */
+
+:root {
+    --archetype-bg: #031427;
+    --archetype-text: #d3e4fe;
+    --archetype-font-primary: 'Geist', sans-serif;
+    --archetype-font-mono: 'JetBrains Mono', monospace;
+    --archetype-accent: #62fae3;
+    --archetype-surface: #102034;
+}
+
+/* Force body styles */
+body {
+    background-color: var(--archetype-bg) !important;
+    color: var(--archetype-text) !important;
+    font-family: var(--archetype-font-primary) !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--archetype-font-primary) !important;
+    color: #ffffff !important; /* Primary color from design.md */
+}
+
+/* Links */
+a {
+    color: var(--archetype-accent) !important;
+}
+
+a:hover {
+    color: #3cddc7 !important; /* tertiary-fixed-dim */
+}
+
+/* Monospace elements */
+code, pre, .mono {
+    font-family: var(--archetype-font-mono) !important;
+}
+
+/* Form inputs & buttons (global) */
+input, textarea, select {
+    font-family: var(--archetype-font-primary) !important;
+}
+
+/* Header/Footer wrappers (often use specific classes depending on theme) */
+.site-header, .site-footer, #masthead, #colophon {
+    background-color: var(--archetype-surface) !important;
+    border-color: rgba(255,255,255,0.05) !important;
+}
