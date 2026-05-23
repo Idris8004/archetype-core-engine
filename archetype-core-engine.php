@@ -19,6 +19,17 @@ define( 'ARCHETYPE_CORE_URL', plugin_dir_url( __FILE__ ) );
 require_once ARCHETYPE_CORE_DIR . 'includes/class-archetype-settings.php';
 require_once ARCHETYPE_CORE_DIR . 'includes/class-archetype-ajax.php';
 
+// Initialize Plugin Update Checker
+require_once ARCHETYPE_CORE_DIR . 'includes/plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/Idris8004/archetype-core-engine/',
+	__FILE__,
+	'archetype-core-engine'
+);
+$myUpdateChecker->setBranch('main');
+
 class Archetype_Core_Engine {
 
     public function __construct() {
